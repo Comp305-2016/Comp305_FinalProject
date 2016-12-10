@@ -7,9 +7,7 @@ public class FlashlightDummyController : MonoBehaviour {
     public GameController gamecontroller;
     
     // Use this for initialization
-    void Start () {
-        this._check = false;
-	}
+   
 	
 	// Update is called once per frame
 	void Update () {
