@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour {
 	private int _livesValue; 
 	private int _scoreValue;
     private int _keyValue;
+    private string _scene;
+    private bool _check;
     //private int _weaponValue;
     //private string _scene;
     private float _timer;
@@ -75,12 +77,32 @@ public class GameController : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		this.LivesValue = 5; 
+        this._check = false;
+        Scene _curScene = SceneManager.GetActiveScene();
+        _scene = _curScene.name;
+        
+            if (this._scene == "Game")
+            {
+                this._timer = 300.00f;
+
+            }
+            else if (this._scene == "Game2")
+            {
+                this._timer = 420.00f;
+
+            }
+            else if (this._scene == "Game3")
+        {
+            this._timer = 600.00f;
+            this._check = true;
+        }
+
+        this.LivesValue = 5; 
 		this.ScoreValue = 0;
         this.KeyValue = 2;
         //this.WeaponValue=1;
-        this._timer = 600.00f;
         this.TimerLabel.gameObject.SetActive(false);
+        
 
         /*
          Scene _curScene = SceneManager.GetActiveScene();
@@ -98,13 +120,17 @@ public class GameController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (this._timer > 1)
+
+        if (this._check == true)
         {
-            onTime();
-        }
-        else
-        {
-            this.EndMenu();
+            if (this._timer > 1)
+            {
+                onTime();
+            }
+            else
+            {
+                this.EndMenu();
+            }
         }
     }
 
@@ -138,5 +164,12 @@ public class GameController : MonoBehaviour {
     {
         SceneManager.LoadScene("GameOverScene");
     }
+    void OnTriggerEnter(Collider other)
+    {
 
+        if (other.gameObject.CompareTag("Player"))
+        {
+            this._check = true;
+        }
+    }
 }
