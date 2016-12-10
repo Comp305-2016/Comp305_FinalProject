@@ -32,7 +32,7 @@ public class EnemyBehaviour : MonoBehaviour {
 	}
 
     //Check for collision
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
         {

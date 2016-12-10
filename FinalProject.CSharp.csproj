@@ -82,17 +82,17 @@
     <Compile Include="Assets\_Imported Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
     <Compile Include="Assets\_Imported Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
     <Compile Include="Assets\_Imported Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" />
-    <Compile Include="Assets\_Imported Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
-    <Compile Include="Assets\_Imported Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
-    <Compile Include="Assets\_Imported Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
-    <Compile Include="Assets\_Imported Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
-    <Compile Include="Assets\_Imported Assets\CrossPlatformInput\Scripts\Joystick.cs" />
-    <Compile Include="Assets\_Imported Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
-    <Compile Include="Assets\_Imported Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
-    <Compile Include="Assets\_Imported Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
-    <Compile Include="Assets\_Imported Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
-    <Compile Include="Assets\_Imported Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
-    <Compile Include="Assets\_Imported Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+    <Compile Include="Assets\_Imported Assets\Chibi Mummy\Models\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+    <Compile Include="Assets\_Imported Assets\Chibi Mummy\Models\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+    <Compile Include="Assets\_Imported Assets\Chibi Mummy\Models\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+    <Compile Include="Assets\_Imported Assets\Chibi Mummy\Models\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+    <Compile Include="Assets\_Imported Assets\Chibi Mummy\Models\CrossPlatformInput\Scripts\Joystick.cs" />
+    <Compile Include="Assets\_Imported Assets\Chibi Mummy\Models\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+    <Compile Include="Assets\_Imported Assets\Chibi Mummy\Models\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+    <Compile Include="Assets\_Imported Assets\Chibi Mummy\Models\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+    <Compile Include="Assets\_Imported Assets\Chibi Mummy\Models\CrossPlatformInput\Scripts\TiltInput.cs" />
+    <Compile Include="Assets\_Imported Assets\Chibi Mummy\Models\CrossPlatformInput\Scripts\TouchPad.cs" />
+    <Compile Include="Assets\_Imported Assets\Chibi Mummy\Models\CrossPlatformInput\Scripts\VirtualInput.cs" />
     <Compile Include="Assets\_Imported Assets\Utility\ActivateTrigger.cs" />
     <Compile Include="Assets\_Imported Assets\Utility\AlphaButtonClickMask.cs" />
     <Compile Include="Assets\_Imported Assets\Utility\AutoMobileShaderSwitch.cs" />
@@ -132,8 +132,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_Imported Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+    <None Include="Assets\_Imported Assets\Chibi Mummy\Models\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\_Imported Assets\Chibi Mummy\readme.txt" />
-    <None Include="Assets\_Imported Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

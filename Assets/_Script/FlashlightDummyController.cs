@@ -4,7 +4,7 @@ using System.Collections;
 public class FlashlightDummyController : MonoBehaviour {
     public AudioSource pickup;
     public GameObject flashlight;
-    public GameController gamecontroller;
+    //public GameController gamecontroller;
     
     // Use this for initialization
    
@@ -21,7 +21,7 @@ public class FlashlightDummyController : MonoBehaviour {
             Debug.Log("flashlight hit");
             flashlight.SetActive(true);
             this.gameObject.SetActive(false);
-            this.gamecontroller.onTime();
+//            this.gamecontroller.onTime();
 
             this.pickup.Play();
             
