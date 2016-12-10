@@ -119,6 +119,7 @@
     <Compile Include="Assets\_Imported Assets\Utility\WaypointProgressTracker.cs" />
     <Compile Include="Assets\_Script\CoinScript.cs" />
     <Compile Include="Assets\_Script\EndContoller.cs" />
+    <Compile Include="Assets\_Script\EnemyBehaviour.cs" />
     <Compile Include="Assets\_Script\EnemyController.cs" />
     <Compile Include="Assets\_Script\FlashlighController.cs" />
     <Compile Include="Assets\_Script\FlashlightDummyController.cs" />

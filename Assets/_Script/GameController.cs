@@ -8,22 +8,21 @@ public class GameController : MonoBehaviour {
 	private int _livesValue; 
 	private int _scoreValue;
     private int _keyValue;
+    //private int _weaponValue;
+    //private string _scene;
     private float _timer;
     private int minutes;
     private int seconds;
+    
 
     [Header("UI Objects")]
 	public Text LivesLabel;
 	public Text ScoreLabel;
     public Text KeyLabel;
-	//public Text GameOverLabel; 
+	//public Text WeaponLabel; 
 	//public Text FinalScoreLabel; 
     public Text TimerLabel;
-    /*
-    public Button RestartButton; 
-	public GameObject Player; 
-	public GameObject Enemy; 
-*/
+    
 	public int LivesValue {
 		get {
 			return this._livesValue;
@@ -38,8 +37,19 @@ public class GameController : MonoBehaviour {
 			}
 		}
 	}
+    /*
+     public int WeaponValue {
+		get {
+			return this._weaponValue;
+		}
 
-	public int ScoreValue {
+		set {
+			 this._weaponValue = value;
+            this.WeaponLabel.text = "Weapon Needed: " + this._weaponValue;
+		}
+	}
+         */
+    public int ScoreValue {
 		get {
 			return this._scoreValue;
 		}
@@ -68,16 +78,26 @@ public class GameController : MonoBehaviour {
 		this.LivesValue = 5; 
 		this.ScoreValue = 0;
         this.KeyValue = 2;
+        //this.WeaponValue=1;
         this._timer = 600.00f;
         this.TimerLabel.gameObject.SetActive(false);
+
+        /*
+         Scene _curScene = SceneManager.GetActiveScene();
+        _scene = _curScene.name;
+          if( this._scene== "GameL2") {
+            if (gamecontroller.KeyValue <= 0 && gamecontroller.WeaponValue<=0)
+            {
+                SceneManager.LoadScene("InstructionL3Scene");
+            }*/
         /*
 		this.GameOverLabel.gameObject.SetActive (false);
 		this.FinalScoreLabel.gameObject.SetActive (false);
 		this.RestartButton.gameObject.SetActive (false);*/
-	}
+    }
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
         if (this._timer > 1)
         {
             onTime();
