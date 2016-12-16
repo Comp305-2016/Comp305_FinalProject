@@ -24,13 +24,15 @@ public class EndContoller : MonoBehaviour {
             {
                 SceneManager.LoadScene("InstructionL2Scene");
             }
-        }/* else if( this._scene== "GameL2") {
-            if (gamecontroller.KeyValue <= 0 && gamecontroller.WeaponValue<=0)
+        }else if( this._scene== "GameL2")
+        {
+
+            if (gamecontroller.KeyValue <= 0 && gamecontroller.WeaponValue <= 0)
             {
                 SceneManager.LoadScene("InstructionL3Scene");
             }
         }
-        }*/
+       
     }
 
     void OnTriggerEnter(Collider other)

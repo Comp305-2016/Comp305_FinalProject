@@ -75,6 +75,9 @@ public class EnemyController : MonoBehaviour {
 		}
 
 	}
+    public void TurnAround() {
+      //  this._transform.rotation=Quaternion.Slerp(_transform.rotation, Quaternion.LookRotation()
+    }
     //Method opens gameover scene when player dies;
     public void EndMenu()
     {

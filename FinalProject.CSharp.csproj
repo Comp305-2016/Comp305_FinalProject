@@ -125,6 +125,7 @@
     <Compile Include="Assets\_Script\FlashlightDummyController.cs" />
     <Compile Include="Assets\_Script\GameController.cs" />
     <Compile Include="Assets\_Script\GameOverController.cs" />
+    <Compile Include="Assets\_Script\GunTriggerController.cs" />
     <Compile Include="Assets\_Script\InstructionController.cs" />
     <Compile Include="Assets\_Script\KeyController.cs" />
     <Compile Include="Assets\_Script\MenuController.cs" />

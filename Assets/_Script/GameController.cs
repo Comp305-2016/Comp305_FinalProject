@@ -10,8 +10,8 @@ public class GameController : MonoBehaviour {
     private int _keyValue;
     private string _scene;
     private bool _check;
-    //private int _weaponValue;
-    //private string _scene;
+    private int _weaponValue;
+    
     private float _timer;
     private int minutes;
     private int seconds;
@@ -21,9 +21,10 @@ public class GameController : MonoBehaviour {
 	public Text LivesLabel;
 	public Text ScoreLabel;
     public Text KeyLabel;
-	//public Text WeaponLabel; 
+	public Text WeaponLabel; 
 	//public Text FinalScoreLabel; 
     public Text TimerLabel;
+    
     
 	public int LivesValue {
 		get {
@@ -39,7 +40,7 @@ public class GameController : MonoBehaviour {
 			}
 		}
 	}
-    /*
+    
      public int WeaponValue {
 		get {
 			return this._weaponValue;
@@ -50,7 +51,7 @@ public class GameController : MonoBehaviour {
             this.WeaponLabel.text = "Weapon Needed: " + this._weaponValue;
 		}
 	}
-         */
+         
     public int ScoreValue {
 		get {
 			return this._scoreValue;
@@ -80,11 +81,10 @@ public class GameController : MonoBehaviour {
         this._check = false;
         Scene _curScene = SceneManager.GetActiveScene();
         _scene = _curScene.name;
-        
-            if (this._scene == "Game")
+        if (this._scene == "Game")
             {
                 this._timer = 300.00f;
-
+            this.WeaponLabel.gameObject.SetActive(false);
             }
             else if (this._scene == "Game2")
             {
@@ -95,32 +95,25 @@ public class GameController : MonoBehaviour {
         {
             this._timer = 600.00f;
             this._check = true;
+            this.WeaponLabel.gameObject.SetActive(false);
+            this.KeyLabel.gameObject.SetActive(false);
         }
 
         this.LivesValue = 5; 
 		this.ScoreValue = 0;
         this.KeyValue = 2;
-        //this.WeaponValue=1;
+        this.WeaponValue=1;
         this.TimerLabel.gameObject.SetActive(false);
+
         
 
-        /*
-         Scene _curScene = SceneManager.GetActiveScene();
-        _scene = _curScene.name;
-          if( this._scene== "GameL2") {
-            if (gamecontroller.KeyValue <= 0 && gamecontroller.WeaponValue<=0)
-            {
-                SceneManager.LoadScene("InstructionL3Scene");
-            }*/
-        /*
-		this.GameOverLabel.gameObject.SetActive (false);
-		this.FinalScoreLabel.gameObject.SetActive (false);
-		this.RestartButton.gameObject.SetActive (false);*/
+
+
     }
 
     // Update is called once per frame
     void Update () {
-
+        
         if (this._check == true)
         {
             if (this._timer > 1)
@@ -132,6 +125,8 @@ public class GameController : MonoBehaviour {
                 this.EndMenu();
             }
         }
+
+        
     }
 
     //Method displays final score and restart button once game is over 
