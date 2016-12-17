@@ -5,14 +5,14 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class GameController : MonoBehaviour {
-    public Transform SpawnPoint;
+   /* public Transform SpawnPoint;
     public GameObject Player;
     public GameObject Coin;
 
     public int MaxCoins = 20;
 
     public List<GameObject> CoinPool;
-
+    */
     //Private Variables 
     private int _livesValue; 
 	private int _scoreValue;
@@ -114,8 +114,8 @@ public class GameController : MonoBehaviour {
         this.WeaponValue=1;
         this.TimerLabel.gameObject.SetActive(false);
 
-        this.CoinPool = new List<GameObject>(); // initialize the CoinPool
-        this.BuildCoinPool();
+      //  this.CoinPool = new List<GameObject>(); // initialize the CoinPool
+        //this.BuildCoinPool();
 
 
 
@@ -163,7 +163,7 @@ public class GameController : MonoBehaviour {
 		this.LivesLabel.gameObject.SetActive (false);
         this.KeyLabel.gameObject.SetActive(false);
 	}
-    */
+    
     private void BuildCoinPool()
     {
         for (int countCount = 0; countCount < this.MaxCoins; countCount++)
@@ -185,7 +185,7 @@ public class GameController : MonoBehaviour {
             }
         }
 
-    }
+    }*/
     public void onTime()
     {
         this.TimerLabel.gameObject.SetActive(true);
