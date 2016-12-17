@@ -32,7 +32,15 @@ public class EndContoller : MonoBehaviour {
                 SceneManager.LoadScene("InstructionL3Scene");
             }
         }
-       
+        else if (this._scene == "GameOverScene")
+        {
+
+            if (gamecontroller.KeyValue <= 0 && gamecontroller.WeaponValue <= 0)
+            {
+                SceneManager.LoadScene("InstructionL3Scene");
+            }
+        }
+
     }
 
     void OnTriggerEnter(Collider other)

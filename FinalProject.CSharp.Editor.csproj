@@ -132,6 +132,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="FinalProject.CSharp.Plugins.csproj">
+      <Project>{4125AECC-B4DF-8C6F-3D8F-13279FF75CBE}</Project>
+      <Name>FinalProject.CSharp.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="FinalProject.CSharp.csproj">
       <Project>{789CD091-CB6D-895A-BD0D-2483BD8C713E}</Project>
       <Name>FinalProject.CSharp</Name>

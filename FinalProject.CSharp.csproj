@@ -78,6 +78,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="FinalProject.CSharp.Plugins.csproj">
+      <Project>{4125AECC-B4DF-8C6F-3D8F-13279FF75CBE}</Project>
+      <Name>FinalProject.CSharp.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\SimpleParticlePack\Scripts\ParticleTester.cs" />
     <Compile Include="Assets\_Imported Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\_Imported Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
     <Compile Include="Assets\_Imported Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
@@ -117,6 +124,15 @@
     <Compile Include="Assets\_Imported Assets\Utility\TimedObjectDestructor.cs" />
     <Compile Include="Assets\_Imported Assets\Utility\WaypointCircuit.cs" />
     <Compile Include="Assets\_Imported Assets\Utility\WaypointProgressTracker.cs" />
+    <Compile Include="Assets\_ImportedAsset\Standard Assets\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
+    <Compile Include="Assets\_ImportedAsset\Standard Assets\Environment\Water\Water\Scripts\Displace.cs" />
+    <Compile Include="Assets\_ImportedAsset\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
+    <Compile Include="Assets\_ImportedAsset\Standard Assets\Environment\Water\Water\Scripts\MeshContainer.cs" />
+    <Compile Include="Assets\_ImportedAsset\Standard Assets\Environment\Water\Water\Scripts\PlanarReflection.cs" />
+    <Compile Include="Assets\_ImportedAsset\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
+    <Compile Include="Assets\_ImportedAsset\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
+    <Compile Include="Assets\_ImportedAsset\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
+    <Compile Include="Assets\_ImportedAsset\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
     <Compile Include="Assets\_Script\CoinScript.cs" />
     <Compile Include="Assets\_Script\EndContoller.cs" />
     <Compile Include="Assets\_Script\EnemyBehaviour.cs" />
@@ -130,6 +146,8 @@
     <Compile Include="Assets\_Script\KeyController.cs" />
     <Compile Include="Assets\_Script\MenuController.cs" />
     <Compile Include="Assets\_Script\StartController.cs" />
+    <Compile Include="Assets\_Scripts\PlayerBehaviour.cs" />
+    <Compile Include="Assets\_Scripts\PlayerShooting.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_Imported Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />

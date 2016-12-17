@@ -2,10 +2,19 @@
 using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class GameController : MonoBehaviour {
-	//Private Variables 
-	private int _livesValue; 
+    public Transform SpawnPoint;
+    public GameObject Player;
+    public GameObject Coin;
+
+    public int MaxCoins = 20;
+
+    public List<GameObject> CoinPool;
+
+    //Private Variables 
+    private int _livesValue; 
 	private int _scoreValue;
     private int _keyValue;
     private string _scene;
@@ -105,7 +114,8 @@ public class GameController : MonoBehaviour {
         this.WeaponValue=1;
         this.TimerLabel.gameObject.SetActive(false);
 
-        
+        this.CoinPool = new List<GameObject>(); // initialize the CoinPool
+        this.BuildCoinPool();
 
 
 
@@ -143,7 +153,28 @@ public class GameController : MonoBehaviour {
         this.KeyLabel.gameObject.SetActive(false);
 	}
     */
+    private void BuildCoinPool()
+    {
+        for (int countCount = 0; countCount < this.MaxCoins; countCount++)
+        {
+            GameObject coin = (GameObject)Instantiate(this.Coin);
+            coin.SetActive(false);
+            this.CoinPool.Add(coin);
+        }
+    }
 
+    private void PlaceCoins()
+    {
+        foreach (var coin in CoinPool)
+        {
+            if (!coin.activeInHierarchy)
+            { // search the pool for a coin that is not in the scene
+                coin.SetActive(true); // place the coin in the scene
+                coin.transform.position = new Vector3(UnityEngine.Random.Range(-20f, 20f), 20, UnityEngine.Random.Range(-20f, 20f));
+            }
+        }
+
+    }
     public void onTime()
     {
         this.TimerLabel.gameObject.SetActive(true);
