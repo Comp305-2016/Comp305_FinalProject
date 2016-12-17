@@ -107,7 +107,7 @@ public class GameController : MonoBehaviour {
             this.WeaponLabel.gameObject.SetActive(false);
             this.KeyLabel.gameObject.SetActive(false);
         }
-
+        
         this.LivesValue = 5; 
 		this.ScoreValue = 0;
         this.KeyValue = 2;
@@ -136,7 +136,18 @@ public class GameController : MonoBehaviour {
             }
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            SceneManager.LoadScene("InstructionL1Scene");
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            SceneManager.LoadScene("InstructionL2Scene");
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            SceneManager.LoadScene("InstructionL3Scene");
+        }
     }
 
     //Method displays final score and restart button once game is over 

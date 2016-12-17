@@ -26,5 +26,11 @@ public class StartController : MonoBehaviour {
             Debug.Log("Button pressed");
             SceneManager.LoadScene("Game2");
         }
+        else if
+          (this._scene == "InstructionL3Scene")
+        {
+            Debug.Log("Button pressed");
+            SceneManager.LoadScene("Game3");
+        }
     }
 }
